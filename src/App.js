@@ -1,15 +1,37 @@
-import React from 'react'
+
 import { Button, Segment, Icon, Grid} from 'semantic-ui-react'
-import { useState } from 'react';
-import background from './st.webp';
+import {  useState } from 'react';
+import background from './sfa.jpg';
 
 const App = () => {  
-  const [count, setCount ] = useState(0)
- 
-  // const continuosIncerment = () => {
-  //   console.log(`Setting ${count}`);
-  //   setCount(count + 1);
+  const [count, setCount] = useState(0)
+  // const timer = useRef(null);
+  // const increment = () => {
+  // timer.current = setInterval(() => setCount(prev => prev + 1), 1000);
   // }
+
+  // function timeoutClear() {
+  //   clearInterval(timer.current);
+  // }
+
+  // function count() {
+  // const [count, setCount] = useState(0);
+
+  // const incrementCount = () => {
+  //   setCount(count + 1);
+  // };
+
+  // const decrementCount = () => {
+  //   setCount(count - 1);
+  // };
+
+  // let counterColor = "green";
+  // if (count >= 5 && count <= 9) {
+  //   counterColor = "blue";
+  // } else if (count === 10) {
+  //   counterColor = "red";
+  // }
+
   return (
     <div style={{backgroundImage:`url(${background})`,
     // backgroundColor: 'pink'
@@ -26,13 +48,13 @@ const App = () => {
   
             <Grid centered style={{height:"150px",width: "350px" }}>
               <Grid.Row centered>
-                <Grid.Column color='teal'textAlign='center'><h2>{count}</h2></Grid.Column>
+                <Grid.Column color='teal'textAlign='center'><h2>{count}</h2></Grid.Column>  
               </Grid.Row>
             </Grid>
           
             <Grid centered>
               <Grid.Row centered>
-                <Button color="green" animated onMouseDown={() => setCount(count+1)}>
+                <Button color="green" animated onClick={()=> setCount(count + 1)}>
                   <Button.Content visible >Increase</Button.Content>
                   <Button.Content hidden>
                     <Icon name='add'/>
@@ -55,7 +77,7 @@ const App = () => {
           </Segment>
       </Grid> 
 
-      <Grid textAlign='center'style={{marginTop:"208px",width: "1300px",color:"black"}}><h1>Sharique Ahmad...(12105943)</h1></Grid>
+      <Grid textAlign='center'style={{marginTop:"180px",width: "1300px",color:"blue",backgroundColor: 'pink'}}><h1>Sharique Ahmad...(12105943)</h1></Grid>
     </div>
   )
   
